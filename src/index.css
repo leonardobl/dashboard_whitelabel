@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .title-section {
+    @apply text-dark text-center text-[32px] font-bold mb-[32px] lg:mb-[80px];
+  }
+
+  .card {
+    @apply bg-dark rounded-[32px] p-[32px] flex flex-col gap-[24px] max-w-[360px];
+  }
+
+  .card-title {
+    @apply text-white text-[20px] font-bold;
+  }
+
+  .card-text {
+    @apply text-white;
+  }
+}
