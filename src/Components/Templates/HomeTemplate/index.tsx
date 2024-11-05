@@ -1,6 +1,29 @@
+import { useEffect } from "react";
 import { Button } from "../../Atoms/Button";
 
-export const HomeTemplate = () => {
+export async function getServerSideProps() {
+  const res = await fetch("URL_DA_API");
+  const data = await res.json();
+
+  return {
+    props: {
+      services: data.services,
+      locations: data.locations,
+    },
+  };
+}
+
+export const HomeTemplate = ({
+  services,
+  locations,
+}: {
+  services?: string[];
+  locations?: string[];
+}) => {
+  useEffect(() => {
+    console.log(services);
+    console.log(locations);
+  }, []);
   return (
     <div className="h-dvh">
       <div className="py-[48px] px-[16px] w-full max-w-[1440px] mx-auto md:py-[32px] ">
