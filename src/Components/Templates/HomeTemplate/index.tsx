@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Button } from "../../Atoms/Button";
+// import { Button } from "../../Atoms/Button";
+import { ButtonEffect } from "../../Atoms/ButtonEffect";
 
 export async function getServerSideProps() {
   const res = await fetch("URL_DA_API");
@@ -29,9 +30,9 @@ export const HomeTemplate = ({
       <div className="py-[48px] px-[16px] w-full max-w-[1440px] mx-auto md:py-[32px] ">
         <header className="flex justify-between items-center m-auto mb-[16px]">
           <img src="/assets/svg/logo.svg" alt="logo" />
-          <Button iconleft="/assets/svg/icon-arrow-right-white.svg">
+          <ButtonEffect iconleft="/assets/svg/icon-arrow-right-white.svg">
             Agendar Vistoria
-          </Button>
+          </ButtonEffect>
         </header>
 
         <img
