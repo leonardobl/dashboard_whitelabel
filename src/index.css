@@ -1,4 +1,5 @@
 @import "./Components/Atoms/ButtonEffect/styles.css";
+@import "./Components/Atoms/Input/styles.css";
 
 @tailwind base;
 @tailwind components;

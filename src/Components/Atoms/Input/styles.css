@@ -1,0 +1,104 @@
+.input {
+  width: 100%;
+  display: flex;
+  height: 42px;
+  padding: 0px 12px;
+
+  border-radius: 20px;
+  border: 1px solid #010e2e;
+  outline: none;
+
+  color: #010e2e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  transition: all 0.15s ease-in-out;
+}
+
+.input:focus {
+  border-color: #54acf2;
+}
+
+.input:disabled {
+  border-color: #9d9d9d;
+}
+
+.input::placeholder {
+  color: #9d9d9d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.input.error {
+  border-color: #ff5656;
+}
+
+.input.error + img {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(55%) saturate(7500%)
+    hue-rotate(329deg) brightness(107%) contrast(101%) !important;
+}
+
+.input-label {
+  p {
+    color: #010e2e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4px;
+
+    > span {
+      color: #ff5656;
+    }
+  }
+}
+
+.input-label:has(.error) {
+  p {
+    color: #ff5656;
+  }
+}
+
+#error-message {
+  color: #ff5656;
+  font-size: 14px;
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 12px;
+}
+
+.container-input {
+  position: relative;
+
+  > img {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    display: block;
+    transform: translateY(-50%);
+    transition: all 0.15s ease-in-out;
+  }
+
+  > img.icon-eye {
+    cursor: pointer;
+  }
+}
+
+.container-input:has(.input:disabled) {
+  > img#icon-right {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(4%) saturate(7%)
+      hue-rotate(2deg) brightness(90%) contrast(85%);
+  }
+}
+.container-input:has(.input:focus):not(:has(.input:disabled)) {
+  > img#icon-right {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(73%) saturate(1205%)
+      hue-rotate(180deg) brightness(100%) contrast(91%);
+  }
+}
