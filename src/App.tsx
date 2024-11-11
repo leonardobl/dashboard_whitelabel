@@ -1,11 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./Components/Pages/Home";
+import { BrowserRouter, Routes } from "react-router-dom";
+import { useProtectedRoutes } from "./Routes/ProtectedRouters/useProtected.routes";
+import { useUnProtectedRoutes } from "./Routes/UnProtectedRouters/useUnProtected.routes";
 
 function App() {
+  const ProtectedRoutes = useProtectedRoutes();
+  const UnProtectedRoutes = useUnProtectedRoutes();
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {ProtectedRoutes}
+        {UnProtectedRoutes}
       </Routes>
     </BrowserRouter>
   );

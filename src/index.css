@@ -1,3 +1,5 @@
+@import "./Components/Atoms/ButtonEffect/styles.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,67 +19,5 @@
 
   .card-text {
     @apply text-white;
-  }
-
-  @media (min-width: 600px) {
-    .buttonEffect {
-      overflow: hidden;
-      position: relative;
-      border: 1px solid #2d2d2d;
-
-      > span,
-      > img {
-        position: relative;
-        z-index: 2;
-      }
-    }
-
-    .buttonEffect::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 104%;
-      height: 106%;
-      border-radius: 20px;
-      top: 50%;
-      background: #ffffff;
-      z-index: 1;
-      transform: translateY(-50%);
-
-      animation: slideOut 0.35s forwards;
-    }
-
-    .buttonEffect:hover {
-      > span {
-        color: #2d2d2d;
-      }
-
-      > img {
-        filter: brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(0%)
-          hue-rotate(243deg) brightness(107%) contrast(84%);
-      }
-    }
-
-    .buttonEffect:hover::after {
-      animation: slideIn 0.35s forwards;
-    }
-
-    @keyframes slideIn {
-      0% {
-        left: -55%;
-      }
-      100% {
-        left: 0;
-      }
-    }
-
-    @keyframes slideOut {
-      0% {
-        left: 50%;
-      }
-      100% {
-        left: 155%;
-      }
-    }
   }
 }
