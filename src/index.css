@@ -1,5 +1,6 @@
 @import "./Components/Atoms/ButtonEffect/styles.css";
 @import "./Components/Atoms/Input/styles.css";
+@import "./Components/Templates//LoginTemplate/styles.css";
 
 @tailwind base;
 @tailwind components;
