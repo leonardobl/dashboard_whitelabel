@@ -1,0 +1,18 @@
+.page {
+  padding: 20px;
+  min-height: 100dvh;
+}
+
+.wrapper {
+  background: url("/assets/img/bg-login-sm.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 640px) {
+    background: url("/assets/img/bg-login-xl.png");
+  }
+
+  @media (min-width: 1200px) {
+    background: url("/assets/img/bg-login-2xl.png");
+  }
+}
