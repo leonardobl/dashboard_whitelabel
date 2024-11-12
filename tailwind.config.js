@@ -8,6 +8,9 @@ export default {
     colors: {
       dark: "#2d2d2d",
       white: "#fff",
+      gray: "#9d9d9d",
+      blue: "#010E2E",
+      "blue-light": "#54ACF2",
     },
     extend: {},
   },

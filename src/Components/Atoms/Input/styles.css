@@ -97,7 +97,7 @@
   }
 }
 .container-input:has(.input:focus):not(:has(.input:disabled)) {
-  > img#icon-right {
+  > img {
     filter: brightness(0) saturate(100%) invert(59%) sepia(73%) saturate(1205%)
       hue-rotate(180deg) brightness(100%) contrast(91%);
   }
