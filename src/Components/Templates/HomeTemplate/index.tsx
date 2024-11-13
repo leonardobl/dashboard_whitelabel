@@ -105,6 +105,25 @@ export const HomeTemplate = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-8 border-b border-gray ">
+          <div className="mb-8">
+            <h2 className="text-blue text-xl">Serviços</h2>
+            <p className="text-gray">
+              Adicione os serviços oferecidos pela sua empresa.
+            </p>
+          </div>
+
+          <div>
+            <Button
+              theme="text"
+              iconright="/assets/svg/icon-plus-blue-light.svg"
+              className="text-blue-btn"
+            >
+              Adicionar serviço
+            </Button>
+          </div>
+        </section>
       </div>
     </PageTemplate>
   );
