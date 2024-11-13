@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export const usePageTemplate = () => {
-  const isMobile = useMediaQuery({ maxWidth: "760px" });
+  const isMobile = useMediaQuery({ maxWidth: "768px" });
   const [isOpen, setIsOpen] = useState(isMobile ? false : true);
 
   useEffect(() => {
