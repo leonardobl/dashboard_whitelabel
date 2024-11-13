@@ -7,3 +7,5 @@ export const ButtonTW = twMerge(
 export const ButtonTWBlue = twMerge("bg-blue text-white");
 
 export const ButtonTWBlueLight = twMerge("bg-blue-light text-white");
+
+export const ButtonTWGray = twMerge("bg-gray-light text-blue");
