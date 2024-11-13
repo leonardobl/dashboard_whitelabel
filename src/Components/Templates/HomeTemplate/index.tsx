@@ -1,4 +1,4 @@
-import { Sketch } from "@uiw/react-color";
+import Sketch from "@uiw/react-color-sketch";
 import { Button } from "../../Atoms/Button";
 import { InputFile } from "../../Atoms/InputFile";
 import { PageTemplate } from "../PageTemplate";
