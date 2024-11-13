@@ -1,7 +1,18 @@
-// import { Route } from "react-router-dom";
-// import { Home } from "../../Components/Pages/Home";
+import { Route } from "react-router-dom";
+import { Home } from "../../Components/Pages/Home";
 // import { ProtectedRoute } from "../../Components/Atoms/ProtectedRoute";
 
 export const useProtectedRoutes = () => {
-  return <></>;
+  return (
+    <>
+      <Route
+        path="/"
+        element={
+          // <ProtectedRoute>
+          <Home />
+          // </ProtectedRoute>
+        }
+      />
+    </>
+  );
 };
