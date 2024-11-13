@@ -9,10 +9,10 @@ export const PageTemplate = (props: IPageTemplateProps) => {
   return (
     <div
       {...props}
-      className="bg-blue-bg pt-9 min-h-dvh flex relative md:pr-[72px]"
+      className="bg-blue-bg pt-9 flex relative h-dvh md:pr-[72px] overflow-y-auto"
     >
       <nav
-        className={`bg-blue-bg left-[-100%] px-6 absolute transition-all min-h-full w-full md:max-w-[235px]  md:left-0 ${
+        className={`bg-blue-bg left-[-100%] z-40 px-6 absolute transition-all h-full w-full md:max-w-[235px]  md:left-0 ${
           isOpen && isMobile && "left-[0%]"
         } md:relative`}
       >
@@ -59,12 +59,12 @@ export const PageTemplate = (props: IPageTemplateProps) => {
           </li>
         </ul>
       </nav>
-      <main className="bg-white rounded-t-[60px] flex-1 py-8 px-4 md:px-8">
+      <main className="bg-white rounded-t-[60px] h-fit min-h-full flex-1 py-8 px-4 md:px-8">
         {props.children}
       </main>
 
       <div
-        className="fixed bg-yellow max-w-[320px] w-full flex justify-center items-center rounded-[40px] h-[60px] right-[50%] translate-x-[50%] bottom-4 sm:hidden"
+        className="fixed z-50 bg-yellow max-w-[320px] w-full flex justify-center items-center rounded-[40px] h-[60px] right-[50%] translate-x-[50%] bottom-4 sm:hidden"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <p className="text-white text-xs flex flex-col items-center justify-center">

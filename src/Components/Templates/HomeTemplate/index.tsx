@@ -1,11 +1,11 @@
-import Sketch from "@uiw/react-color-sketch";
+import Chrome from "@uiw/react-color-chrome";
 import { Button } from "../../Atoms/Button";
 import { InputFile } from "../../Atoms/InputFile";
 import { PageTemplate } from "../PageTemplate";
 import { useHome } from "./useHome";
 
 export const HomeTemplate = () => {
-  const { disableAlpha, hex, setDisableAlpha, setHex } = useHome();
+  const { hsva, setHsva, GithubPlacement } = useHome();
 
   return (
     <PageTemplate>
@@ -44,17 +44,19 @@ export const HomeTemplate = () => {
             </p>
           </div>
           <div>
-            <Sketch
-              style={{ marginLeft: 20 }}
-              color={hex}
-              disableAlpha={disableAlpha}
+            <Chrome
+              color={hsva}
+              style={{
+                padding: "32px 24px",
+                borderRadius: "8px",
+                width: "100%",
+                maxWidth: "270px",
+              }}
+              placement={GithubPlacement.Right}
               onChange={(color) => {
-                setHex(color.hex);
+                setHsva(color.hsva);
               }}
             />
-            <button onClick={() => setDisableAlpha(!disableAlpha)}>
-              disableAlpha={disableAlpha.toString()}
-            </button>
           </div>
         </section>
       </div>

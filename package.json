@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.26.0",
-    "@uiw/react-color-sketch": "^2.3.2",
+    "@uiw/color-convert": "^2.3.2",
+    "@uiw/react-color-chrome": "^2.3.2",
+    "@uiw/react-color-github": "^2.3.2",
     "classnames": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
