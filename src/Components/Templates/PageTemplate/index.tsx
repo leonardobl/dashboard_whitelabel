@@ -59,7 +59,7 @@ export const PageTemplate = (props: IPageTemplateProps) => {
           </li>
         </ul>
       </nav>
-      <main className="bg-white rounded-t-[60px] h-fit min-h-full flex-1 py-8 px-4 md:px-8">
+      <main className="bg-white rounded-t-[60px] h-fit min-h-full flex-1 py-8 px-4 pb-16 md:px-8">
         {props.children}
       </main>
 
