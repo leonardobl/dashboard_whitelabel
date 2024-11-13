@@ -12,7 +12,7 @@ export const PageTemplate = (props: IPageTemplateProps) => {
       className="bg-blue-bg pt-9 min-h-dvh flex relative md:pr-[72px]"
     >
       <nav
-        className={`bg-blue-bg left-[-100%] px-8 absolute transition-all min-h-full w-full md:max-w-[235px]  md:left-0 ${
+        className={`bg-blue-bg left-[-100%] px-6 absolute transition-all min-h-full w-full md:max-w-[235px]  md:left-0 ${
           isOpen && isMobile && "left-[0%]"
         } md:relative`}
       >
@@ -27,7 +27,7 @@ export const PageTemplate = (props: IPageTemplateProps) => {
           </div>
         </div>
 
-        <ul>
+        <ul className="flex flex-col gap-5">
           <li>
             <NavLink
               to="/"
@@ -41,9 +41,25 @@ export const PageTemplate = (props: IPageTemplateProps) => {
               <span className="text-white font-bold">Aparência</span>
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              to="/dados-basicos"
+              className={({ isActive }) =>
+                `flex gap-2 px-4 py-2 w-full ${
+                  isActive && "bg-blue rounded-[10px]"
+                }`
+              }
+            >
+              <img src="/assets/svg/icon-avatar-menu.svg" alt="icon colors" />
+              <span className="text-white font-bold whitespace-nowrap">
+                Dados Básicos
+              </span>
+            </NavLink>
+          </li>
         </ul>
       </nav>
-      <main className="bg-white rounded-t-[60px] flex-1 py-5 px-4 md:py-8 md:px-5">
+      <main className="bg-white rounded-t-[60px] flex-1 py-8 px-4 md:px-5">
         {props.children}
       </main>
 
