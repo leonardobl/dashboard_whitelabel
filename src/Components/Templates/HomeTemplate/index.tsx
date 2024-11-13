@@ -45,7 +45,7 @@ export const HomeTemplate = () => {
               Selecione a cor principal da sua empresa.
             </p>
           </div>
-          <div>
+          <div className="m-auto w-fit  md:w-full">
             <Chrome
               color={hsva}
               style={{
