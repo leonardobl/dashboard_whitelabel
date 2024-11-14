@@ -10,4 +10,4 @@ export const ButtonTWBlueLight = twMerge("bg-blue-light text-white");
 
 export const ButtonTWGray = twMerge("bg-gray-light text-blue");
 
-export const ButtonTWText = twMerge("underline ");
+export const ButtonTWText = twMerge("underline h-fit max-w-fit px-1");

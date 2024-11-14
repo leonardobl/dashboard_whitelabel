@@ -140,7 +140,7 @@ export const HomeTemplate = () => {
           </div>
 
           <div>
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
               <p className="text-gray font-semibold">
                 Serviços: <span className="font-normal">Nome do serviço</span>
               </p>
@@ -150,9 +150,19 @@ export const HomeTemplate = () => {
                   Lorem Ipsum has been the industry text ever since....
                 </span>
               </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
             </div>
 
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
               <p className="text-gray font-semibold">
                 Serviços: <span className="font-normal">Nome do serviço</span>
               </p>
@@ -162,21 +172,42 @@ export const HomeTemplate = () => {
                   Lorem Ipsum has been the industry text ever since....
                 </span>
               </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
             </div>
 
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
               <p className="text-gray font-semibold">
                 Serviços: <span className="font-normal">Nome do serviço</span>
               </p>
               <p className="text-gray font-semibold">
-                Descrição:{" "}
+                Descrição:
                 <span className="font-normal">
                   Lorem Ipsum has been the industry text ever since....
                 </span>
               </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
             </div>
           </div>
         </section>
+
         <Modal
           isOpen={modalServiceOpen}
           onRequestClose={() => setModalServiceOpen(false)}
