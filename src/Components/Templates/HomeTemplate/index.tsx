@@ -230,9 +230,7 @@ export const HomeTemplate = () => {
         <section className="py-8 border-b border-gray ">
           <div className="mb-8">
             <h2 className="text-blue text-xl">Unidades de Atendimento</h2>
-            <p className="text-gray">
-              Adicione os serviços oferecidos pela sua empresa.h
-            </p>
+            <p className="text-gray">Adicione suas unidades de atendimento.</p>
           </div>
 
           <div>
