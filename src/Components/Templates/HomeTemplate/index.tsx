@@ -24,6 +24,9 @@ export const HomeTemplate = () => {
       <form>
         <h2 className="text-blue text-xl">Logotipo</h2>
         <p className="text-gray">Insira o logotipo da sua empresa.</p>
+
+        {/* LOGO */}
+
         <section className="py-8 border-b border-gray">
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="flex flex-col items-center gap-5">
@@ -53,6 +56,8 @@ export const HomeTemplate = () => {
           </div>
         </section>
 
+        {/* COR */}
+
         <section className="py-8 border-b border-gray">
           <div className="mb-8">
             <h2 className="text-blue text-xl">Cor Principal</h2>
@@ -77,6 +82,8 @@ export const HomeTemplate = () => {
           </div>
         </section>
 
+        {/* LINK MAPA */}
+
         <section className="py-8 border-b border-gray">
           <div className="mb-8">
             <h2 className="text-blue text-xl">Link Mapa</h2>
@@ -93,7 +100,13 @@ export const HomeTemplate = () => {
           </div>
         </section>
 
+        {/* BANNER PRINCIPAL */}
+
         <section className="py-8 border-b border-gray ">
+          <div className="mb-8">
+            <h2 className="text-blue text-xl">Banner Principal</h2>
+            <p className="text-gray">Insira o Banner da sua empresa.</p>
+          </div>
           <div className="flex flex-col items-center gap-8 md:flex-row">
             <div className="flex flex-col items-center gap-5 w-full md:w-fit">
               <div className="bg-gray-light rounded-[20px] w-full  h-72 flex items-center justify-center shadow-lg border-dashed border-[1px] border-gray lg:w-[530px]">
@@ -122,6 +135,8 @@ export const HomeTemplate = () => {
           </div>
         </section>
 
+        {/* SERVICOS */}
+
         <section className="py-8 border-b border-gray ">
           <div className="mb-8">
             <h2 className="text-blue text-xl">Serviços</h2>
@@ -143,7 +158,28 @@ export const HomeTemplate = () => {
           </div>
 
           <div>
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col  md:justify-between md:items-center">
+              <p className="text-gray font-semibold">
+                Serviços: <span className="font-normal">Nome do serviço</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Descrição:
+                <span className="font-normal">
+                  Lorem Ipsum has been the industry text ever since....
+                </span>
+              </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
+            </div>
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col  md:justify-between md:items-center">
               <p className="text-gray font-semibold">
                 Serviços: <span className="font-normal">Nome do serviço</span>
               </p>
@@ -165,29 +201,7 @@ export const HomeTemplate = () => {
               </div>
             </div>
 
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
-              <p className="text-gray font-semibold">
-                Serviços: <span className="font-normal">Nome do serviço</span>
-              </p>
-              <p className="text-gray font-semibold">
-                Descrição:
-                <span className="font-normal">
-                  Lorem Ipsum has been the industry text ever since....
-                </span>
-              </p>
-
-              <div className="flex gap-4">
-                <Button type="button" theme="text">
-                  Editar
-                </Button>
-
-                <button type="button">
-                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
-                </button>
-              </div>
-            </div>
-
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col  md:justify-between md:items-center">
               <p className="text-gray font-semibold">
                 Serviços: <span className="font-normal">Nome do serviço</span>
               </p>
@@ -210,6 +224,8 @@ export const HomeTemplate = () => {
             </div>
           </div>
         </section>
+
+        {/* UNIDADES DE ATENDIMENTO */}
 
         <section className="py-8 border-b border-gray ">
           <div className="mb-8">
@@ -232,7 +248,7 @@ export const HomeTemplate = () => {
           </div>
 
           <div>
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col  md:justify-between md:items-center">
               <p className="text-gray font-semibold">
                 Cidade: <span className="font-normal">Nome da Cidade</span>
               </p>
@@ -252,7 +268,7 @@ export const HomeTemplate = () => {
               </div>
             </div>
 
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col  md:justify-between md:items-center">
               <p className="text-gray font-semibold">
                 Cidade: <span className="font-normal">Nome da Cidade</span>
               </p>
@@ -272,7 +288,7 @@ export const HomeTemplate = () => {
               </div>
             </div>
 
-            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col  md:justify-between md:items-center">
               <p className="text-gray font-semibold">
                 Cidade: <span className="font-normal">Nome da Cidade</span>
               </p>
@@ -294,11 +310,53 @@ export const HomeTemplate = () => {
           </div>
         </section>
 
+        {/* RODAPE */}
+
+        <section className="py-8 border-b border-gray">
+          <div className="mb-8">
+            <h2 className="text-blue text-xl">Rodapé</h2>
+            <p className="text-gray">Insira o logotipo da empresa</p>
+          </div>
+
+          <div className="flex flex-col items-center gap-8 md:flex-row">
+            <div className="flex flex-col items-center gap-5">
+              <div className="bg-gray-light rounded-[20px] w-24 h-24 flex items-center justify-center shadow-lg border-dashed border-[1px] border-gray">
+                <div className="w-9 h-9 bg-gray-light flex justify-center items-center rounded-md shadow-lg">
+                  <img
+                    src="/assets/svg/icon-cloud-upload.svg"
+                    alt="icone input file"
+                  />
+                </div>
+              </div>
+              <p className="text-gray">SVG. / 4MB / 50x50</p>
+            </div>
+            <div className="flex gap-4">
+              <div>
+                <InputFile
+                  onChange={(file) => console.log(file)}
+                  fileTypes={[]}
+                />
+              </div>
+              <div>
+                <Button type="button" theme="gray">
+                  Remover
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="py-12">
+          <Button className="m-auto md:ml-auto md:mr-0" theme="blue-light">
+            Salvar
+          </Button>
+        </div>
+
         <Modal
           isOpen={modalServiceOpen}
           onRequestClose={() => setModalServiceOpen(false)}
         >
-          <div className="p-8">
+          <div className="p4 md:p-8">
             <button
               type="button"
               className="ml-auto block"
@@ -331,7 +389,7 @@ export const HomeTemplate = () => {
           isOpen={modalLocationOpen}
           onRequestClose={() => setModalLocationOpen(false)}
         >
-          <div className="p-8">
+          <div className="p4 md:p-8">
             <button
               type="button"
               className="ml-auto block"

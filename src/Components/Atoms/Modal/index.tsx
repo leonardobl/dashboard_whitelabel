@@ -3,6 +3,7 @@ import ReactModal, { Props, Styles } from "react-modal";
 const customStyles: Styles = {
   content: {
     maxWidth: 600,
+    width: "100%",
     height: "fit-content",
     top: "50%",
     left: "50%",
