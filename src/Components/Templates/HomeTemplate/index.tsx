@@ -195,7 +195,7 @@ export const HomeTemplate = () => {
               </div>
 
               <div>
-                <TextArea placeholder="Descrição" />
+                <TextArea placeholder="Descrição" required />
               </div>
 
               <div className="flex items-center gap-4">
