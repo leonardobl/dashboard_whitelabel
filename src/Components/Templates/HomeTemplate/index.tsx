@@ -15,6 +15,8 @@ export const HomeTemplate = () => {
     GithubPlacement,
     modalServiceOpen,
     setModalServiceOpen,
+    modalLocationOpen,
+    setModalLocationOpen,
   } = useHome();
 
   return (
@@ -50,6 +52,7 @@ export const HomeTemplate = () => {
             </div>
           </div>
         </section>
+
         <section className="py-8 border-b border-gray">
           <div className="mb-8">
             <h2 className="text-blue text-xl">Cor Principal</h2>
@@ -208,6 +211,89 @@ export const HomeTemplate = () => {
           </div>
         </section>
 
+        <section className="py-8 border-b border-gray ">
+          <div className="mb-8">
+            <h2 className="text-blue text-xl">Unidades de Atendimento</h2>
+            <p className="text-gray">
+              Adicione os serviços oferecidos pela sua empresa.h
+            </p>
+          </div>
+
+          <div>
+            <Button
+              theme="text"
+              type="button"
+              iconright="/assets/svg/icon-plus-blue-light.svg"
+              className="text-blue-btn"
+              onClick={() => setModalLocationOpen(true)}
+            >
+              Adicionar localização
+            </Button>
+          </div>
+
+          <div>
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+              <p className="text-gray font-semibold">
+                Cidade: <span className="font-normal">Nome da Cidade</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Contato:
+                <span className="font-normal">55+ (00) 00000-0000</span>
+              </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
+            </div>
+
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+              <p className="text-gray font-semibold">
+                Cidade: <span className="font-normal">Nome da Cidade</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Contato:
+                <span className="font-normal">55+ (00) 00000-0000</span>
+              </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
+            </div>
+
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col justify-between items-center">
+              <p className="text-gray font-semibold">
+                Cidade: <span className="font-normal">Nome da Cidade</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Contato:
+                <span className="font-normal">55+ (00) 00000-0000</span>
+              </p>
+
+              <div className="flex gap-4">
+                <Button type="button" theme="text">
+                  Editar
+                </Button>
+
+                <button type="button">
+                  <img src="/assets/svg/icon-trash.svg" alt="icone lixo" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <Modal
           isOpen={modalServiceOpen}
           onRequestClose={() => setModalServiceOpen(false)}
@@ -234,6 +320,47 @@ export const HomeTemplate = () => {
                   <InputMoney label="Valor" required placeholder="R$ 0,00" />
                 </div>
                 <Button theme="blue-light" className="mt-auto">
+                  Salvar
+                </Button>
+              </div>
+            </form>
+          </div>
+        </Modal>
+
+        <Modal
+          isOpen={modalLocationOpen}
+          onRequestClose={() => setModalLocationOpen(false)}
+        >
+          <div className="p-8">
+            <button
+              type="button"
+              className="ml-auto block"
+              onClick={() => setModalLocationOpen(false)}
+            >
+              X
+            </button>
+            <form className="flex flex-col gap-6">
+              <div>
+                <Input
+                  label="Geolocalização"
+                  required
+                  iconright="/assets/svg/icon-link.svg"
+                  placeholder="https://..."
+                />
+              </div>{" "}
+              <div>
+                <Input label="Cidade" required />
+              </div>{" "}
+              <div>
+                <Input
+                  label="Contato"
+                  required
+                  iconright="/assets/svg/icon-phone.svg"
+                  placeholder="55+ (00) 00000-0000"
+                />
+              </div>
+              <div>
+                <Button theme="blue-light" className="ml-auto">
                   Salvar
                 </Button>
               </div>

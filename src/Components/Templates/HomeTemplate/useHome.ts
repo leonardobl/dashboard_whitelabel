@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export const useHome = () => {
   const [modalServiceOpen, setModalServiceOpen] = useState(false);
+  const [modalLocationOpen, setModalLocationOpen] = useState(false);
   const [hsva, setHsva] = useState({ h: 0, s: 25.71, v: 82.35, a: 0.32 });
   const hex = hsvaToHex(hsva);
 
@@ -14,5 +15,7 @@ export const useHome = () => {
     GithubPlacement,
     modalServiceOpen,
     setModalServiceOpen,
+    modalLocationOpen,
+    setModalLocationOpen,
   };
 };
