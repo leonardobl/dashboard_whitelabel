@@ -22,4 +22,14 @@
   .card-text {
     @apply text-white;
   }
+
+  .error-message {
+    color: #ff5656;
+    font-size: 14px;
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 12px;
+  }
 }

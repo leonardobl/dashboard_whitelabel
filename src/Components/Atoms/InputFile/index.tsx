@@ -32,7 +32,9 @@ export const InputFile = ({ onChange, fileTypes }: InputFileProps) => {
       hoverTitle=" "
       types={fileTypes}
     >
-      <Button theme="blue-light">Inserir</Button>
+      <Button type="button" theme="blue-light">
+        Inserir
+      </Button>
     </FileUploader>
   );
 };

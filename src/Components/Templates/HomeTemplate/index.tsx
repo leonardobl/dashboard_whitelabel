@@ -4,13 +4,22 @@ import { InputFile } from "../../Atoms/InputFile";
 import { PageTemplate } from "../PageTemplate";
 import { useHome } from "./useHome";
 import { Input } from "../../Atoms/Input";
+import { Modal } from "../../Atoms/Modal";
+import { TextArea } from "../../Atoms/TextArea";
+import { InputMoney } from "../../Atoms/InputMoney";
 
 export const HomeTemplate = () => {
-  const { hsva, setHsva, GithubPlacement } = useHome();
+  const {
+    hsva,
+    setHsva,
+    GithubPlacement,
+    modalServiceOpen,
+    setModalServiceOpen,
+  } = useHome();
 
   return (
     <PageTemplate>
-      <div>
+      <form>
         <h2 className="text-blue text-xl">Logotipo</h2>
         <p className="text-gray">Insira o logotipo da sua empresa.</p>
         <section className="py-8 border-b border-gray">
@@ -34,7 +43,9 @@ export const HomeTemplate = () => {
                 />
               </div>
               <div>
-                <Button theme="gray">Remover</Button>
+                <Button type="button" theme="gray">
+                  Remover
+                </Button>
               </div>
             </div>
           </div>
@@ -100,7 +111,9 @@ export const HomeTemplate = () => {
                 />
               </div>
               <div>
-                <Button theme="gray">Remover</Button>
+                <Button type="button" theme="gray">
+                  Remover
+                </Button>
               </div>
             </div>
           </div>
@@ -117,14 +130,86 @@ export const HomeTemplate = () => {
           <div>
             <Button
               theme="text"
+              type="button"
               iconright="/assets/svg/icon-plus-blue-light.svg"
               className="text-blue-btn"
+              onClick={() => setModalServiceOpen(true)}
             >
               Adicionar serviço
             </Button>
           </div>
+
+          <div>
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col">
+              <p className="text-gray font-semibold">
+                Serviços: <span className="font-normal">Nome do serviço</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Descrição:
+                <span className="font-normal">
+                  Lorem Ipsum has been the industry text ever since....
+                </span>
+              </p>
+            </div>
+
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col">
+              <p className="text-gray font-semibold">
+                Serviços: <span className="font-normal">Nome do serviço</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Descrição:
+                <span className="font-normal">
+                  Lorem Ipsum has been the industry text ever since....
+                </span>
+              </p>
+            </div>
+
+            <div className="p-3 flex flex-col gap-3 bg-gray-light mt-6 md:grid md:grid-flow-col">
+              <p className="text-gray font-semibold">
+                Serviços: <span className="font-normal">Nome do serviço</span>
+              </p>
+              <p className="text-gray font-semibold">
+                Descrição:{" "}
+                <span className="font-normal">
+                  Lorem Ipsum has been the industry text ever since....
+                </span>
+              </p>
+            </div>
+          </div>
         </section>
-      </div>
+        <Modal
+          isOpen={modalServiceOpen}
+          onRequestClose={() => setModalServiceOpen(false)}
+        >
+          <div className="p-8">
+            <button
+              type="button"
+              className="ml-auto block"
+              onClick={() => setModalServiceOpen(false)}
+            >
+              X
+            </button>
+            <form className="flex flex-col gap-6">
+              <div>
+                <Input label="Serviço" required />
+              </div>
+
+              <div>
+                <TextArea placeholder="Descrição" />
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="flex-1">
+                  <InputMoney label="Valor" required placeholder="R$ 0,00" />
+                </div>
+                <Button theme="blue-light" className="mt-auto">
+                  Salvar
+                </Button>
+              </div>
+            </form>
+          </div>
+        </Modal>
+      </form>
     </PageTemplate>
   );
 };

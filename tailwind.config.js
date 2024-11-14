@@ -15,6 +15,7 @@ export default {
       "blue-bg": "#011443",
       "blue-light": "#54ACF2",
       "blue-btn": "#2556CC",
+      red: "#FF5656",
     },
     extend: {},
   },
